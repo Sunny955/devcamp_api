@@ -14,6 +14,9 @@ dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
+//Body Parser
+app.use(express.json());
+
 //Mount Routers
 app.use("/api/v1/bootcamps", bootcamps);
 
