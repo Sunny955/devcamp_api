@@ -22,7 +22,7 @@ const importData = async () => {
   try {
     await Bootcamp.create(bootcamps);
 
-    console.log(chalk.green("Data Imported...."));
+    console.log(chalk.green.inverse("Data Imported...."));
     process.exit();
   } catch (err) {
     console.error(err);
@@ -34,7 +34,7 @@ const deleteData = async () => {
   try {
     await Bootcamp.deleteMany();
 
-    console.log(chalk.red("Data Destroyed...."));
+    console.log(chalk.red.inverse("Data Destroyed...."));
     process.exit();
   } catch (err) {
     console.error(err);
