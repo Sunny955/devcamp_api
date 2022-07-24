@@ -8,8 +8,11 @@ const {
 } = require("../controllers/courses");
 
 const Course = require("../models/Course");
+
+// Loading middlewares
 const advancedResults = require("../middleware/advanceResults");
 const { protect, authorize } = require("../middleware/auth");
+
 const router = express.Router({ mergeParams: true });
 
 router

@@ -8,6 +8,8 @@ const {
   updateDetails,
   updatePassword,
 } = require("../controllers/auth");
+
+//Loading middleware
 const { protect } = require("../middleware/auth");
 
 const router = express.Router();
