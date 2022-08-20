@@ -91,6 +91,13 @@ exports.updateDetails = asyncHandler(async (req, res, next) => {
     email: req.body.email,
   };
 
+  if (req.body.role) {
+    return res.status(401).json({
+      success: false,
+      mssg: "Cannot update role feild",
+    });
+  }
+
   const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
     new: true,
     runValidators: true,
